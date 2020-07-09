@@ -29,11 +29,12 @@ public class Person {
     	// if our wallet exists.
         if(myWallet != null) {
         	
-        	// if what we are trying to retrieve our money within our limits
-        	if(retrieve < myWallet.getAllCredit()) {
+        	// If what we are trying to retrieve our money within our limits
+        	if(retrieve <= myWallet.getAllCredit()) {
 				return this.myWallet.getCredit(retrieve);
         	}else {
-        		System.out.println("WARNING: "+this.name+" does not have!");
+        		System.out.println("WARNING: "+this.name+" does not have the required credit!");
+        		System.out.println("WARNING: Available credit: "+this.myWallet.getAllCredit());
         		return 0;
         	}
         }else{

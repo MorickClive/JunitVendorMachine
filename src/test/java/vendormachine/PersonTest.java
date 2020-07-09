@@ -29,10 +29,10 @@ public class PersonTest {
 	@Test
 	public void test2() {
 		Person alyx = new Person("Alyx", testWallet);
-		float result = alyx.getCredit(15.0f);
+		float result = alyx.getCredit(11.0f);
 		
-		// here we expect it to fail if we didn't set credit in @before.
-		assertEquals(15.0f, result, 0.1f);
+		// Here we expect it to fail, can you use the @Before to resolve this issue?.
+		assertEquals(11.0f, result, 0.1f);
 	}
 	
 	@After
