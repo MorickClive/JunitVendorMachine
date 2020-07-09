@@ -1,5 +1,7 @@
 package vendormachine.vendors;
 
+import vendormachine.vendors.item.Snack;
+
 public class DefaultSnacks {
     public static final Snack[] snackList = {
             new Snack("Water",0.20f),

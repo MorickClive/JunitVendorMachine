@@ -3,7 +3,7 @@ package vendormachine.runner;
 import vendormachine.users.Person;
 import vendormachine.users.util.Wallet;
 import vendormachine.vendors.DrinkVendingMachine;
-import vendormachine.vendors.Snack;
+import vendormachine.vendors.item.Snack;
 
 public class App {
 

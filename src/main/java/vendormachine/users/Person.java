@@ -26,8 +26,16 @@ public class Person {
     }
 
     public float getCredit(float retrieve){
+    	// if our wallet exists.
         if(myWallet != null) {
-            return this.myWallet.getCredit(retrieve);
+        	
+        	// if what we are trying to retrieve our money within our limits
+        	if(retrieve < myWallet.getAllCredit()) {
+				return this.myWallet.getCredit(retrieve);
+        	}else {
+        		System.out.println("WARNING: "+this.name+" does not have!");
+        		return 0;
+        	}
         }else{
             //TODO replace with Log4j
             System.out.println("WARNING: "+this.name+" does not own a wallet!");

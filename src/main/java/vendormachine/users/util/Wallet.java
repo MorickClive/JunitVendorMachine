@@ -20,14 +20,16 @@ public class Wallet {
     //===============================
     //===  'get'ors
     //===============================
-    public float getCredit(float retrieve){
+    public float getCredit(float retrieve) {
         if(retrieve > this.storedCredit){
             //TODO replace 'Sys.out's with Log4j
             System.out.println("Warning: request exceeds value in wallet!");
             System.out.println("Request: " + retrieve + ",\tstored value: " + retrieve);
 
-            return this.storedCredit;
+            return retrieve;
         }else {
+        	this.storedCredit -= retrieve;
+        	
             return retrieve;
         }
     }

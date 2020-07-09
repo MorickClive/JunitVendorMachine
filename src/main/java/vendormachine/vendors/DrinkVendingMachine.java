@@ -2,6 +2,7 @@ package vendormachine.vendors;
 
 import vendormachine.users.Person;
 import vendormachine.vendors.enums.BRANDS;
+import vendormachine.vendors.item.Snack;
 
 import java.util.ArrayList;
 import java.util.Arrays;
