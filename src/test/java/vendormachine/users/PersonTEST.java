@@ -1,17 +1,20 @@
-package vendormachine;
+package vendormachine.users;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import java.lang.StringBuilder;
 
 import vendormachine.users.Person;
 import vendormachine.users.util.Wallet;
 
-public class PersonTest {
+// Uncomment for Example 100% Person Test Coverage
+
+public class PersonTEST {
 	
 	// Resources
 	private float credit = 10.0f;
@@ -25,6 +28,7 @@ public class PersonTest {
 	@Before
 	public void beforeTest() {
 		
+		// Set Default test Wallet credit
 		testWallet.setCredit(credit);
 		
 		// Start of console test format
@@ -38,7 +42,6 @@ public class PersonTest {
 		System.out.println(sBuilder.toString());
 		activeTest++;
 		// End of console test format
-		
 	}
 	
 	@Test
@@ -82,7 +85,7 @@ public class PersonTest {
 	}
 	
 	@Test
-	public void test_Walletfunds() {		
+	public void test_insufficentWalletfunds() {		
 		Person alyx = new Person("Alyx", testWallet);
 		
 		assertEquals(0f, alyx.getCredit(20.0f), 0.1f);
