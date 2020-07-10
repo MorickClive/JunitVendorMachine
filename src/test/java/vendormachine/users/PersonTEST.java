@@ -13,7 +13,7 @@ import vendormachine.users.Person;
 import vendormachine.users.util.Wallet;
 
 // Uncomment for Example 100% Person Test Coverage
-
+@Ignore
 public class PersonTEST {
 	
 	// Resources
