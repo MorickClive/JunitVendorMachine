@@ -9,7 +9,6 @@ public class Person {
 
     public Person(String name){
         this.name = name;
-        this.myWallet = new Wallet();
     }
 
     public Person(String name, Wallet wallet){
@@ -23,6 +22,15 @@ public class Person {
 
     public String getName(){
         return this.name;
+    }
+    
+    public Wallet getWallet() {
+    	if(myWallet != null) {
+    		return this.myWallet;
+    	}else {
+    		System.out.print("Warning: "+this.name+" does not have a wallet to retrieve.");
+    		return null;
+    	}
     }
 
     public float getCredit(float retrieve){
@@ -60,4 +68,9 @@ public class Person {
             System.out.println("WARNING: "+this.name+" does not own a wallet!");
         }
     }
+    
+    public void setWallet(Wallet wallet) {
+    	this.myWallet = wallet;
+    }
+    
 }
