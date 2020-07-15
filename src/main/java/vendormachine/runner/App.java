@@ -26,7 +26,6 @@ public class App {
 		System.out.println("");
 		System.out.println(alyx.getName() + " your drink is:\n'" + itemSelection.name +"'");
 		System.out.println("\t- Cost: £" + itemSelection.cost());
-
 	}
 
 }

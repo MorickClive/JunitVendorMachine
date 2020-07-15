@@ -13,7 +13,6 @@ import vendormachine.users.Person;
 import vendormachine.users.util.Wallet;
 
 // Uncomment for Example 100% Person Test Coverage
-@Ignore
 public class PersonTEST {
 	
 	// Resources
@@ -46,20 +45,35 @@ public class PersonTEST {
 	
 	@Test
 	public void test_Constructor() {
-		Person alan = new Person("Allan");
+		// Constructor 1
+		Person allan = new Person("Allan");
+		assertTrue(allan instanceof Person);
 		
-		alan.setName("Alan");
-		alan.setWallet(testWallet);
-		
-		assertEquals("Alan", alan.getName());
-		assertTrue(alan.getWallet() instanceof Wallet);
-		
-		alan.addCredit(5.0f);
-		assertEquals(15.0f, alan.getCredit(15.0f), 0.1f);
+		// Constructor 2 overload
+		allan = new Person("Allan", testWallet);
+		assertTrue(allan instanceof Person);
 	}
 	
 	@Test
-	public void test1() {
+	public void test_setgetName() {
+		Person alan = new Person("Allan");
+		
+		alan.setName("Alan");
+		
+		assertEquals("Alan", alan.getName());
+	}
+	
+	@Test
+	public void test_setgetWallet() {
+		Person alan = new Person("Allan");
+		
+		alan.setWallet(testWallet);
+		
+		assertTrue(alan.getWallet() instanceof Wallet);
+	}
+	
+	@Test
+	public void test_getCredit() {
 		Person alyx = new Person("Alyx", testWallet);
 		float result = alyx.getCredit(5.0f);
 		
@@ -67,15 +81,15 @@ public class PersonTEST {
 	}
 	
 	@Test
-	public void test2() {		
+	public void test_addCredit() {
 		Person alyx = new Person("Alyx", testWallet);
-		float result = alyx.getCredit(10.0f);
+		alyx.addCredit(5.0f);
 		
-		assertEquals(10.0f, result, 0.1f);
+		assertEquals(15.0f, alyx.getCredit(15.0f), 0.1f);
 	}
 	
 	@Test
-	public void test_noWallet() {		
+	public void test_noWallet() {
 		Person alyx = new Person("Alyx");
 		
 		alyx.addCredit(10.0f);
@@ -85,7 +99,7 @@ public class PersonTEST {
 	}
 	
 	@Test
-	public void test_insufficentWalletfunds() {		
+	public void test_insufficentWalletFunds() {
 		Person alyx = new Person("Alyx", testWallet);
 		
 		assertEquals(0f, alyx.getCredit(20.0f), 0.1f);
