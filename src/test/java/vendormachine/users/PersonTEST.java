@@ -12,7 +12,8 @@ import java.lang.StringBuilder;
 import vendormachine.users.Person;
 import vendormachine.users.util.Wallet;
 
-// Uncomment for Example 100% Person Test Coverage
+// Example 100% Person Test Coverage
+// add @Ignore above class to help WalletTest.java
 public class PersonTEST {
 	
 	// Resources
