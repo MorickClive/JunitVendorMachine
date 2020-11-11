@@ -10,7 +10,7 @@ public class JunitSample {
 	
 	@BeforeAll
 	public static void beforeTestSuite() {
-		System.out.println("BeforeClass: Start of TestSuite\n");
+		System.out.println("BeforeAll: Start of TestSuite\n");
 	}
 	
 	@BeforeEach
@@ -35,6 +35,6 @@ public class JunitSample {
 	
 	@AfterAll
 	public static void afterTestSuite() {
-		System.out.println("AfterClass: End of TestSuite");
+		System.out.println("AfterAll: End of TestSuite");
 	}
 }
