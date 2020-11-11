@@ -1,19 +1,19 @@
 package samplejunit;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class JunitSample {
 	
-	@BeforeClass
+	@BeforeAll
 	public static void beforeTestSuite() {
 		System.out.println("BeforeClass: Start of TestSuite\n");
 	}
 	
-	@Before
+	@BeforeEach
 	public void beforeTest() {
 		System.out.println("Before");
 	}
@@ -28,12 +28,12 @@ public class JunitSample {
 		System.out.println("- Test2");
 	}
 
-	@After
+	@AfterEach
 	public void afterTest() {
 		System.out.println("After\n");
 	}
 	
-	@AfterClass
+	@AfterAll
 	public static void afterTestSuite() {
 		System.out.println("AfterClass: End of TestSuite");
 	}

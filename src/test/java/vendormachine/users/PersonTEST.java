@@ -3,13 +3,10 @@ package vendormachine.users;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
-import java.lang.StringBuilder;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 
-import vendormachine.users.Person;
 import vendormachine.users.util.Wallet;
 
 // Example 100% Person Test Coverage
@@ -25,7 +22,7 @@ public class PersonTEST {
 	private static StringBuilder sBuilder = new StringBuilder();
 	private static String div = "=============================================\n";
 	
-	@Before
+	@BeforeEach
 	public void beforeTest() {
 		
 		// Set Default test Wallet credit
@@ -106,7 +103,7 @@ public class PersonTEST {
 		assertEquals(0f, alyx.getCredit(20.0f), 0.1f);
 	}
 	
-	@After
+	@AfterEach
 	public void afterTest() {
 		System.out.println(div);
 	}
