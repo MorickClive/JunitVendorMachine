@@ -6,7 +6,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class JunitSample {
+public class JunitFiveSample {
+	
+	private static final String div = "========================================";
 	
 	@BeforeAll
 	public static void beforeTestSuite() {
@@ -15,7 +17,8 @@ public class JunitSample {
 	
 	@BeforeEach
 	public void beforeTest() {
-		System.out.println("Before");
+		System.out.println(div);
+		System.out.println( "BeforeEach");
 	}
 	
 	@Test
@@ -30,7 +33,8 @@ public class JunitSample {
 
 	@AfterEach
 	public void afterTest() {
-		System.out.println("After\n");
+		System.out.println("AfterEach");
+		System.out.println(div + "\n");
 	}
 	
 	@AfterAll

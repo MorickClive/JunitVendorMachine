@@ -1,6 +1,6 @@
 package vendormachine.users.util;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class WalletTEST {
 
